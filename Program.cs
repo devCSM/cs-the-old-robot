@@ -51,11 +51,6 @@ public class NorthCommand : RobotCommand
     }
 }
 
-public abstract class RobotCommand
-{
-    public abstract void Run(Robot robot);
-}
-
 public class OffCommand : RobotCommand
 {
     public override void Run(Robot robot)
@@ -70,6 +65,10 @@ public class OnCommand : RobotCommand
     {
         robot.IsPowered = true;
     }
+}
+public abstract class RobotCommand
+{
+    public abstract void Run(Robot robot);
 }
 
 public class Robot
